@@ -1,0 +1,111 @@
+CONDOMINIO_APP/
+├── backend/
+│   ├── modules/                  # Organización por módulos funcionales
+│   │   ├── auth/                 # Módulo de autenticación
+│   │   │   ├── auth.controller.js
+│   │   │   ├── auth.model.js
+│   │   │   ├── auth.routes.js
+│   │   │   └── auth.validation.js
+│   │   │
+│   │   ├── users/                # Módulo de usuarios/residentes
+│   │   │   ├── user.controller.js
+│   │   │   ├── user.model.js
+│   │   │   ├── user.routes.js
+│   │   │   └── user.validation.js
+│   │   │
+│   │   ├── payments/             # Módulo de pagos
+│   │   │   ├── payment.controller.js
+│   │   │   ├── payment.model.js
+│   │   │   ├── payment.routes.js
+│   │   │   └── payment.validation.js
+│   │   │
+│   │   └── notices/              # Módulo de avisos
+│   │       ├── notice.controller.js
+│   │       ├── notice.model.js
+│   │       ├── notice.routes.js
+│   │       └── notice.validation.js
+│   │
+│   ├── middleware/               # Middleware compartido
+│   │   ├── auth.middleware.js
+│   │   └── error.middleware.js
+│   │
+│   ├── config/                   # Configuraciones
+│   │   ├── database.js
+│   │   ├── environment.js
+│   │   └── express.js
+│   │
+│   ├── utils/                    # Utilidades compartidas
+│   │   ├── logger.js
+│   │   └── response.js
+│   │
+│   ├── app.js                    # Configuración de la app
+│   └── server.js                 # Punto de entrada
+│
+└── frontend/
+    └── src/
+        ├── modules/              # Organización por módulos funcionales
+        │   ├── auth/             # Módulo de autenticación
+        │   │   ├── components/
+        │   │   │   ├── Login.js
+        │   │   │   └── Register.js
+        │   │   ├── hooks/
+        │   │   │   └── useAuth.js
+        │   │   ├── services/
+        │   │   │   └── authService.js
+        │   │   └── pages/
+        │   │       └── LoginPage.js
+        │   │
+        │   ├── users/            # Módulo de usuarios/residentes
+        │   │   ├── components/
+        │   │   │   ├── UserForm.js
+        │   │   │   └── UserList.js
+        │   │   ├── services/
+        │   │   │   └── userService.js
+        │   │   └── pages/
+        │   │       ├── UserProfilePage.js
+        │   │       └── UsersPage.js
+        │   │
+        │   ├── payments/         # Módulo de pagos
+        │   │   ├── components/
+        │   │   │   ├── PaymentForm.js
+        │   │   │   └── PaymentList.js
+        │   │   ├── services/
+        │   │   │   └── paymentService.js
+        │   │   └── pages/
+        │   │       └── PaymentsPage.js
+        │   │
+        │   └── notices/          # Módulo de avisos
+        │       ├── components/
+        │       │   ├── NoticeForm.js
+        │       │   └── NoticeList.js
+        │       ├── services/
+        │       │   └── noticeService.js
+        │       └── pages/
+        │           └── NoticesPage.js
+        │
+        ├── shared/               # Componentes compartidos
+        │   ├── components/
+        │   │   ├── Navbar.js
+        │   │   ├── Sidebar.js
+        │   │   ├── Button.js
+        │   │   └── Card.js
+        │   │
+        │   ├── layouts/
+        │   │   ├── AdminLayout.js
+        │   │   └── UserLayout.js
+        │   │
+        │   └── utils/
+        │       ├── api.js
+        │       └── formatters.js
+        │
+        ├── assets/               # Recursos estáticos
+        │   ├── images/
+        │   ├── icons/
+        │   └── styles/
+        │
+        ├── context/              # Estado global
+        │   └── AppContext.js
+        │
+        ├── App.js
+        ├── index.js
+        └── routes.js            # Configuración de rutas
