@@ -1,0 +1,19 @@
+/* Dashboard.css */
+.dashboard {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    padding: 20px;
+  }
+  
+  .dashboard h1 {
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    font-weight: 500;
+    color: #333; /* Color de texto oscuro */
+    margin-bottom: 20px;
+  }
+  
+  .create-user-button {
+    background-color: #007bff; /* Color azul de Bootstrap */
+    border: none;
+    margin-top: 20px;
+  }
+  

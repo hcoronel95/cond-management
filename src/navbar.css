@@ -1,0 +1,24 @@
+.navbar {
+  background-color: #007bff !important;  /* Fondo azul claro */
+}
+
+.navbar-nav .nav-link {
+  color: white !important;  /* Color del texto del navbar */
+}
+
+.navbar-nav .btn-outline-light {
+  margin-left: 10px;
+}
+
+.nav-button {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-color: #007bff;
+  background-color: #e7f1ff;
+  color: #007bff;
+}
+
+.nav-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}

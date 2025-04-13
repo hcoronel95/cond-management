@@ -1,0 +1,19 @@
+/* AdminPanel.css */
+.admin-panel-container {
+    background-color: #f8f9fa;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+  }
+  
+  .admin-image {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .form-container {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  

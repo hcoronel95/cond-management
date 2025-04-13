@@ -1,0 +1,25 @@
+.login-container {
+    margin-top: 50px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-container h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .login-container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .login-container .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  

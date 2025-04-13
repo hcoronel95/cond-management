@@ -1,0 +1,41 @@
+body {
+  background-color: #e1f0ff;  /* Fondo de la aplicación */
+}
+
+.admin-dashboard .sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-right: 1px solid #eee;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.admin-dashboard .sidebar h5 {
+  margin-bottom: 20px;
+}
+
+.admin-dashboard .custom-button {
+  margin-bottom: 10px;
+  border-color: #007bff;
+  background-color: #e7f1ff;
+  color: #007bff;
+  font-size: 1.1em;
+  padding: 15px;
+}
+
+.admin-dashboard .custom-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.admin-dashboard .content {
+  margin-left: 25%;
+  padding: 20px;
+  background-color: #e1f0ff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

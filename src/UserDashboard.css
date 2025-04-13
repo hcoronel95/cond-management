@@ -1,0 +1,36 @@
+.admin-dashboard .sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #eee;
+    min-height: 100vh;
+    position: fixed; /* Asegura que el menú lateral esté siempre visible */
+  }
+  
+  .admin-dashboard .sidebar h5 {
+    margin-bottom: 20px;
+  }
+  
+  .admin-dashboard .custom-button {
+    margin-bottom: 10px;
+    border-color: #007bff;
+    background-color: #e7f1ff; /* Celeste claro */
+    color: #007bff;
+    font-size: 1.1em; /* Aumenta el tamaño del texto */
+    padding: 15px; /* Aumenta el padding */
+  }
+  
+  .admin-dashboard .custom-button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .admin-dashboard .content {
+    margin-left: 25%; /* Ajusta según el ancho del sidebar */
+    padding: 20px;
+  }
+  
+  .nav-button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
