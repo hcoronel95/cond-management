@@ -1,66 +1,98 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { Form, Button, Container, Row, Col, Image, Alert } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
 import './UserLogin.css';
+import { FaArrowLeft } from 'react-icons/fa';
 
-function UserLogin({ onLogin }) {
+function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
-
-  const handleSubmit = async (e) => {
+  
+  const handleLogin = async (e) => {
     e.preventDefault();
-    setError(null);
-
     try {
-      const response = await axios.post('http://localhost:5000/login', { username, password });
-      onLogin(response.data.user);
-      navigate('/dashboard');
-    } catch (error) {
-      if (error.response) {
-        setError(error.response.data.message);
-      } else {
-        setError('An unexpected error occurred.');
-      }
+      // Aquí iría la llamada a tu API
+      console.log('Iniciando sesión con:', username, password);
+      // Si hay éxito, redireccionar
+      // window.location.href = '/dashboard';
+    } catch (err) {
+      setError('Credenciales incorrectas. Por favor intente nuevamente.');
     }
   };
 
   return (
-    <Container className="login-container">
-      <Row>
-        <Col md={6} className="d-flex align-items-center">
-          <Form onSubmit={handleSubmit} className="w-100">
-            <h2>Login</h2>
-            {error && <Alert variant="danger">{error}</Alert>}
-            <Form.Group controlId="formUsername">
-              <Form.Label>Username</Form.Label>
-              <Form.Control
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group controlId="formPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
-            <Button variant="primary" type="submit" className="mt-3">
-              Login
-            </Button>
-          </Form>
-        </Col>
-        <Col md={6} className="d-none d-md-block">
-          <Image src="/assets/edificio.jpg" alt="Edificio" fluid />
-        </Col>
-      </Row>
-    </Container>
+    <div className="login-page">
+      <nav className="top-navbar">
+        <div className="navbar-brand">Mi Condominio</div>
+        <div className="navbar-links">
+          <a href="/">Inicio</a>
+          <a href="/contactos">Contactos</a>
+          <a href="/login" className="active">Login</a>
+        </div>
+      </nav>
+
+      <div className="login-container">
+        <div className="login-card">
+          <div className="card-left">
+            <button className="back-button">
+              <FaArrowLeft />
+            </button>
+            
+            <h2 className="login-title">Login to system</h2>
+            
+            <p className="login-subtitle">
+              Please enter your login information
+              <br />or <a href="/register" className="register-link">click here</a> to registration
+            </p>
+            
+            {error && <div className="error-message">{error}</div>}
+            
+            <form onSubmit={handleLogin}>
+              <div className="input-group">
+                <input 
+                  type="text" 
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              
+              <div className="input-group">
+                <input 
+                  type="password" 
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              
+              <div className="remember-option">
+                <label className="checkbox-container">
+                  <input 
+                    type="checkbox"
+                    checked={rememberMe}
+                    onChange={() => setRememberMe(!rememberMe)}
+                  />
+                  <span className="checkbox-custom"></span>
+                  Remember me
+                </label>
+              </div>
+              
+              <button type="submit" className="login-button">
+                Log In
+              </button>
+            </form>
+          </div>
+          
+          <div className="card-right">
+            {/* Lado derecho con gradiente */}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
-export default UserLogin;
+export default Login;
